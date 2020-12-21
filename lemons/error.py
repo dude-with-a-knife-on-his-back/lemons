@@ -43,5 +43,16 @@ class error:
 
   def custom(self):
     raise Exception(str(self.custom_message))
-
+    
+  def try_except_else(self, try_message, except_list, except_answer_list, else_message):
+    for i in except_list:
+      try:
+        exec(str(try_message))
+      except i:
+        print(except_answer_list[i])
+      else:
+        print(else_message)
+  
+      
+      
   
