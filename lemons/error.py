@@ -53,6 +53,9 @@ class error:
       else:
         print(else_message)
   
+  def raise_error(self, error_type):
+    exec(f"raise {error_type}({self.custom_message})")
+  
       
       
   
